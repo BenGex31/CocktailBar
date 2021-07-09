@@ -11,7 +11,7 @@ export default function App() {
           "6 cl rhum",
           "3 cl jus de citron vert",
           "7 feuilles de menthe",
-          "2 cl sirop de sucre de cannes",
+          "2 cl sirops sucre de cannes",
           "eau gazeuse"
         ]}
       />
