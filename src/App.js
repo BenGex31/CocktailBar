@@ -1,9 +1,12 @@
+import React from "react";
 import "./styles.css";
 
 import { CocktailCard } from "./Components/CocktailCard/CocktailCard";
 import { cocktailList } from "./model/Cocktaillist";
 import { AppBar } from "./Components/AppBar/AppBar";
 import { useState } from "react";
+
+export const CocktailContext = React.createContext();
 
 export default function App() {
   const [cocktails, setCocktails] = useState(cocktailList);
@@ -19,15 +22,17 @@ export default function App() {
   };
 
   return (
-    <div className="App">
-      <AppBar filter={handleSearch} />
-      {cocktails.map((cocktail) => (
-        <CocktailCard
-          image={cocktail.image}
-          name={cocktail.name}
-          ingredients={cocktail.ingredients}
-        />
-      ))}
-    </div>
+    <CocktailContext.Provider value={[cocktails, setCocktails]}>
+      <div className="App">
+        <AppBar filter={handleSearch} />
+        {cocktails.map((cocktail) => (
+          <CocktailCard
+            image={cocktail.image}
+            name={cocktail.name}
+            ingredients={cocktail.ingredients}
+          />
+        ))}
+      </div>
+    </CocktailContext.Provider>
   );
 }
