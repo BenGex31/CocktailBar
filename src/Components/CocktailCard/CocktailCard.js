@@ -13,6 +13,13 @@ export function CocktailCard(props) {
           <li>{ingredient}</li>
         ))}
       </ol>
+      <button
+        onClick={(e) => {
+          console.log(props.name, e.clientX);
+        }}
+      >
+        Clic me
+      </button>
     </div>
   );
 }
