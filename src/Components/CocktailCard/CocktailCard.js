@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CocktailCard.scss";
 //import { getPopularCocktail } from "../../API/CocktailDB";
 
 export function CocktailCard(props) {
+  const [count, setCount] = useState(0);
+
   return (
     <div className="cocktailCard">
       <img className="cocktailImg" alt="mojito" src={props.image} />
@@ -14,11 +16,11 @@ export function CocktailCard(props) {
         ))}
       </ol>
       <button
-        onClick={(e) => {
-          console.log(props.name, e.clientX);
+        onClick={() => {
+          setCount(count + 1);
         }}
       >
-        Clic me
+        {count}
       </button>
     </div>
   );
