@@ -1,20 +1,14 @@
 import "./styles.css";
 
 import { CocktailCard } from "./Components/CocktailCard/CocktailCard";
+import { cocktailList } from "./model/Cocktaillist";
 
 export default function App() {
   return (
     <div className="App">
-      <CocktailCard
-        name="Mojito"
-        ingredients={[
-          "6 cl rhum",
-          "3 cl jus de citron vert",
-          "7 feuilles de menthe",
-          "2 cl sirops sucre de cannes",
-          "eau gazeuse"
-        ]}
-      />
+      {cocktailList.map((cocktail) => (
+        <CocktailCard name={cocktail.name} ingredients={cocktail.ingredients} />
+      ))}
     </div>
   );
 }

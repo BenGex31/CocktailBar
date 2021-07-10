@@ -1,5 +1,6 @@
 import React from "react";
 import "./CocktailCard.scss";
+//import { getPopularCocktail } from "../../API/CocktailDB";
 
 export function CocktailCard(props) {
   return (
