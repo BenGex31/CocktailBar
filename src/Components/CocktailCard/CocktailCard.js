@@ -5,11 +5,7 @@ import "./CocktailCard.scss";
 export function CocktailCard(props) {
   return (
     <div className="cocktailCard">
-      <img
-        className="cocktailImg"
-        alt="mojito"
-        src={require("../../assets/cocktails/mojito.png")}
-      />
+      <img className="cocktailImg" alt="mojito" src={props.image} />
       <h1 className="cocktailName">{props.name}</h1>
       <div className="separator"></div>
       <ol className="ingredientList">

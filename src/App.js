@@ -7,7 +7,11 @@ export default function App() {
   return (
     <div className="App">
       {cocktailList.map((cocktail) => (
-        <CocktailCard name={cocktail.name} ingredients={cocktail.ingredients} />
+        <CocktailCard
+          image={cocktail.image}
+          name={cocktail.name}
+          ingredients={cocktail.ingredients}
+        />
       ))}
     </div>
   );
