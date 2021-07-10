@@ -15,13 +15,6 @@ export function CocktailCard(props) {
           <li>{ingredient}</li>
         ))}
       </ol>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        {count}
-      </button>
     </div>
   );
 }
