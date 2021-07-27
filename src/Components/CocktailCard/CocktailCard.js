@@ -14,7 +14,7 @@ export function CocktailCard(props) {
       <div className="separator"></div>
       <ol className="ingredientList">
         {props.ingredients.map((ingredient) => (
-          <li>{ingredient}</li>
+          <li key={ingredient.toString()}>{ingredient}</li>
         ))}
       </ol>
     </div>
