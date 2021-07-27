@@ -9,7 +9,7 @@ export function CocktailCard(props) {
 
   return (
     <div className="cocktailCard">
-      <img className="cocktailImg" alt="mojito" src={props.image} />
+      <img className="cocktailImg" alt={props.name} src={props.image} />
       <h1 className="cocktailName">{props.name}</h1>
       <div className="separator"></div>
       <ol className="ingredientList">
