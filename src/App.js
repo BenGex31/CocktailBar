@@ -11,14 +11,16 @@ export const CocktailContext = React.createContext();
 export default function App() {
   const [cocktails, setCocktails] = useState(cocktailList);
   const handleSearch = (text) => {
-    console.log(text);
-    text === ""
-      ? setCocktails(cocktailList)
-      : setCocktails(
-          cocktailList.filter((cocktail) =>
-            cocktail.name.toLowerCase().startsWith(text.toLowerCase())
-          )
-        );
+    //console.log(text);
+    if (text === "") {
+      setCocktails(cocktailList);
+    } else {
+      setCocktails(
+        cocktailList.filter((cocktail) =>
+          cocktail.name.toLowerCase().startsWith(text.toLowerCase())
+        )
+      );
+    }
   };
 
   return (
