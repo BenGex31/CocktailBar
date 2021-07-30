@@ -6,8 +6,11 @@ export function AppBar(props) {
   return (
     <div className="AppBar">
       <h1>Mon bar</h1>
-      <input
-        placeholder="Search..."
+      <TextField
+        id="outlined-basic"
+        label="Search cocktails"
+        variant="outlined"
+        color="secondary"
         onChange={(event) => {
           props.filter(event.target.value);
         }}
