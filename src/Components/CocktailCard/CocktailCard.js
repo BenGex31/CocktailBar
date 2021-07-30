@@ -1,5 +1,5 @@
 import React /*useContext*/ from "react";
-import "./CocktailCard.scss";
+import "./CocktailCard.css";
 //import { CocktailContext } from "../../App";
 //import { Cocktail } from "../../model/Cocktail";
 
